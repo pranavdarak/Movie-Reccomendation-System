@@ -19,21 +19,6 @@ To run the app of local system
 ```
 streamlit run app.py
 ```
-To deploy the app on heroku create setup.sh file with following code
-```
-mkdir -p ~/.streamlit/
-echo "\
-[server]\n\
-headless = true\n\
-port = $PORT\n\
-enableCORS = false\n\
-\n\
-" > ~/.streamlit/config.toml
-```
-Also create a Procfile with following code
-```
-web: sh setup.sh && streamlit run app.py
-```
 To get the movies poster you need tmdb apikey and movie_id send get request
 [READ TMDB API](https://developers.themoviedb.org/3/movies/get-movie-details)
 
